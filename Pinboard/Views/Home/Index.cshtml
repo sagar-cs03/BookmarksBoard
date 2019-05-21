@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Pinboard</h1>
+    <h2 class="display-4"> We organise bookmarks for you so that you can quickly find them when you need it</h2>
+    <br />
+
+    @if(ViewData["isUserLoggedIn"] != "True")
+    {
+        <p>
+            <a asp-area="" asp-controller="User" asp-action="Register">Register </a>to get started or <br />
+            <a asp-area="" asp-controller="User" asp-action="Login"> Login </a> if you are our member already
+        </p>
+    } else
+    {
+        <p>
+            <a asp-area="" asp-controller="Dashboard" asp-action="Index"> Go To Dashboard </a> <br />
+        </p>
+    }
+
+</div>
