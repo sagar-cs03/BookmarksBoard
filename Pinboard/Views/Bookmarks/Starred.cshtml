@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Pinboard.Models.Bookmark>
+
+@{
+    ViewData["Title"] = "Bookmarks";
+}
+
+
+<p>
+    <a asp-action="Create">Create New</a> <br />
+    <a href="/Bookmarks"> All </a>
+    <a href="/Bookmarks/Unread"> Unread </a>
+    <b>  <a href="/starred/Starred"> Starred</a></b>
+    <a href="/Search"> Search by Tag </a>
+    <!--
+        <a href="/Tweets">Tweets</a>
+    -->
+
+    <a href="/Search">Search</a>
+
+</p>
+<div class="logout" style="float:right;">
+    <a asp-controller="User" asp-action="LogOut"> Logout </a>
+    <a asp-controller="Settings" asp-action="Account"> Settings </a>
+</div>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.URL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tags)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.DateAndTimeCreated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="@Html.DisplayFor(modelItem => item.URL)">Visit Site</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tags)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateAndTimeCreated)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BookmarkID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.BookmarkID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BookmarkID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

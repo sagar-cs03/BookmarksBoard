@@ -1,0 +1,68 @@
+﻿@model Pinboard.Models.User
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Settings</h2>
+<br/>
+
+<div class="row">
+    <div class="col-md-2">
+        <div id="Settings">
+            <h5><a asp-action="Index"> Account </a> <br /></h5>
+            <a asp-action="Import"> Import Bookmarks</a> <br />
+            <a asp-action="Backup"> BackUp Bookmarks </a> <br />
+            <a asp-action="Logout" asp-controller="User"> Logout </a>
+            <!--
+         <a asp-action="Services">Connect to Services </a> <br />
+    -->
+        </div>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <div class=" col-md-6">
+        <div id="Account">
+            <form asp-action="UpdatePassword">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                <div class="form-group">
+                    <label class="control-label">Old Password</label>
+                    <input type="password" id="OldPassword" name="OldPassword" value="" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input type="password" asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Confirm Password</label>
+                    <input type="password" id="ConfirmPassword" name="ConfirmPassword" value="" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+
+            @if(ViewData["flashMessage"] != "")
+            {
+                <div id="flashMessage">
+                    <p> @ViewData["flashMessage"] </p>
+                </div>
+            }
+
+        </div> 
+    </div>
+
+</div>
+
+
+
+
+

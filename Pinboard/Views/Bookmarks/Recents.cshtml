@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Pinboard.Models.Bookmark>
+
+@{
+    ViewData["Title"] = "Bookmarks";
+}
+
+
+<p>
+    <a asp-action="Create">Create New</a> <br />
+    <b> <a href="/Bookmarks"> All </a> </b>
+    <a href="/Bookmarks/Unread"> Unread </a>
+    <a href="/Bookmarks/Starred"> Starred</a>
+    <a href="/Search">SearchByTag</a>
+
+</p>
+<div class="logout" style="float:right;">
+    <a asp-controller="User" asp-action="LogOut"> Logout </a>
+    <a asp-controller="Settings" asp-action="Account"> Settings </a>
+</div>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.URL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tags)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.DateAndTimeCreated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="@Html.DisplayFor(modelItem => item.URL)">Visit Site</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tags)
+                </td>
+              
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateAndTimeCreated)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BookmarkID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.BookmarkID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BookmarkID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pinboard.Models
 {
@@ -11,6 +12,9 @@ namespace Pinboard.Models
         [Display(Name = "BookmarkID")]
         [Key]
         public string BookmarkID { get; set; }
+
+        [ForeignKey("User")]
+        public int UserFk { get; set; }
 
         public string URL { get; set; }
 
@@ -26,6 +30,7 @@ namespace Pinboard.Models
 
         public Boolean IsTagged { get; set; }
 
+        [Display(Name ="Date Added")]
         public DateTime DateAndTimeCreated { get; set; }
 
     }

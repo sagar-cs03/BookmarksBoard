@@ -33,7 +33,7 @@ namespace Pinboard.Controllers
                         new RouteValueDictionary {
                         { "Controller", "User" },
                         { "Action", "Login" }
-                                    });
+                                 });
             }
             else if (AllowIfLoggedIn == false && isUserLoggedIn == "True")
             {
@@ -62,6 +62,17 @@ namespace Pinboard.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await _context.Bookmarks.ToListAsync());
+        }
+
+        public async Task<IActionResult> Unread()
+        {
+            return View(await _context.Bookmarks.Where(b => b.IsReadLater == true).ToListAsync());
+        }
+
+        public async Task<IActionResult> Starred()
+        {
+            return View(await _context.Bookmarks.Where(b => b.IsStarred == true).ToListAsync());
+
         }
 
         // GET: Bookmarks/Details/5
@@ -100,7 +111,7 @@ namespace Pinboard.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (bookmark.Tags != "")
+                if (bookmark.Tags == "")
                 {
                     bookmark.IsTagged = false;
                 }
@@ -110,6 +121,7 @@ namespace Pinboard.Controllers
 
                 _context.Add(bookmark);
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
             return View(bookmark);
@@ -204,5 +216,7 @@ namespace Pinboard.Controllers
         {
             return _context.Bookmarks.Any(e => e.BookmarkID == id);
         }
+
+        
     }
 }

@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Settings</h2>
+<br />
+
+<div class="row">
+    <div class="col-md-2">
+        <div id="Settings">
+            <a asp-action="Account"> Account </a> <br />
+            <a asp-action="Import"> Import Bookmarks</a> <br />
+            <b><a asp-action="Backup"> BackUp Bookmarks </a></b><br />
+            <a asp-action="Logout" asp-controller="User"> Logout </a>
+
+            <!--
+         <a asp-action="Services">Connect to Services </a> <br />
+    -->
+        </div>
+    </div>
+    <div class=" col-md-10">
+        <div id="Backup">
+            <h2> Export your bookmarks </h2>
+            <p> <a asp-controller="Settings" asp-action="DownloadBackUpFileInJson"> Click Here</a> to create a copy of the bookmarks for sharing with others </p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+

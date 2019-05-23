@@ -5,7 +5,6 @@ C:\Users\i506670\source\repos\Pinboard\Pinboard\bin\Debug\netcoreapp2.2\Pinboard
 C:\Users\i506670\source\repos\Pinboard\Pinboard\bin\Debug\netcoreapp2.2\Pinboard.pdb
 C:\Users\i506670\source\repos\Pinboard\Pinboard\bin\Debug\netcoreapp2.2\Pinboard.Views.dll
 C:\Users\i506670\source\repos\Pinboard\Pinboard\bin\Debug\netcoreapp2.2\Pinboard.Views.pdb
-C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Pinboard.csprojAssemblyReference.cache
 C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Pinboard.csproj.CoreCompileInputs.cache
 C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Pinboard.RazorAssemblyInfo.cache
 C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Pinboard.RazorAssemblyInfo.cs
@@ -39,3 +38,14 @@ C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Vi
 C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Bookmarks\Details.g.cshtml.cs
 C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Bookmarks\Edit.g.cshtml.cs
 C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Bookmarks\Index.g.cshtml.cs
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Settings\Import.g.cshtml.cs
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Settings\Backup.g.cshtml.cs
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Settings\Services.g.cshtml.cs
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Settings\Account.g.cshtml.cs
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Pinboard.csprojAssemblyReference.cache
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Bookmarks\Unread.g.cshtml.cs
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Bookmarks\Starred.g.cshtml.cs
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Bookmarks\Recents.g.cshtml.cs
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Search\Index.g.cshtml.cs
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Search\Starred.g.cshtml.cs
+C:\Users\i506670\source\repos\Pinboard\Pinboard\obj\Debug\netcoreapp2.2\Razor\Views\Search\Unread.g.cshtml.cs

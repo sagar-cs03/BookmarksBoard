@@ -1,14 +1,29 @@
 ﻿@model IEnumerable<Pinboard.Models.Bookmark>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Bookmarks";
 }
 
-<h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New</a> <br />
+    <b> <a href="/Bookmarks"> All </a> </b>
+    <a href="/Bookmarks/Unread"> Unread </a>
+    <a href="/Bookmarks/Starred"> Starred</a>
+    <a href="/Search">SearchByTag</a>
+    <spans style="float:right;">
+        <a asp-controller="Settings" asp-action="Account"> Settings </a>
+    </spans>
+  
+       
+    
 </p>
+
+
+
+
+
+
 <table class="table">
     <thead>
         <tr>
@@ -19,20 +34,9 @@
                 @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Tags)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsReadLater)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsStarred)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsTagged)
-            </th>
+   
             <th>
                 @Html.DisplayNameFor(model => model.DateAndTimeCreated)
             </th>
@@ -43,26 +47,15 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.URL)
+                <a href="@Html.DisplayFor(modelItem => item.URL)">Visit Site</a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Tags)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsReadLater)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsStarred)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsTagged)
-            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.DateAndTimeCreated)
             </td>

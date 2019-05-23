@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Settings</h2>
+<br />
+
+<div class="row">
+
+    <div class="col-md-2">
+        <div id="Settings">
+            <a asp-action="Account"> Account </a> <br />
+            <b><a asp-action="ImportBookmarks"> Import Bookmarks</a></b> <br />
+            <a asp-action="Backup"> BackUp Bookmarks </a> <br />
+            <a asp-action="Logout" asp-controller="User"> Logout </a>
+
+            <!--
+         <a asp-action="Services">Connect to Services </a> <br />
+    -->
+        </div>
+    </div>
+
+    <div class=" col-md-10">
+        <div id="Import">
+            <form asp-controller="Settings" asp-action="Import" method="post"
+                  enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="control-label">Upload bookmarks HTML file</label>
+                    <input type="file" id="bookmarksFile" name="bookmarksFile" value="" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Upload Bookmarks" class="btn btn-primary" />
+                </div>
+            </form>
+            @if (ViewData["flashMessage"] != "")
+            {
+                <div id="flashMessage">
+                    <p> @ViewData["flashMessage"] </p>
+                </div>
+            }
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
